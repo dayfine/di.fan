@@ -28,6 +28,7 @@ app.use(morgan('dev'))
 app.use(cors())
 app.use('/dist', express.static(path.join(__dirname, '../dist')))
 app.use('/public', express.static(path.join(__dirname, '../public')))
+app.use('/links', express.static(path.join(__dirname, '../links')))
 
 app.use('/api', require('./api'))
 

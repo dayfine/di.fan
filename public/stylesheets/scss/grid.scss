@@ -23,6 +23,11 @@ $gutter: 16px;
   align-items: flex-start;
 }
 
+.center {
+  float: none;
+  margin: 0 auto;
+}
+
 %grid-column {
   position: relative;
   width: 100%;

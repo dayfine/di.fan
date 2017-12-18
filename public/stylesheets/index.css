@@ -16,7 +16,9 @@ html, body {
 }
 
 .main {
-  padding-top: 48px;
+  padding-top: 64px;
+  margin: 0 auto;
+
 }
 
 .mui-icons {

@@ -1,9 +1,13 @@
 import React from 'react'
+import Card from './Card'
 
 function Home (props) {
   return (
-    <div>
-      Hello World!
+    <div className='row'>
+      <Card />
+      <Card />
+      <Card />
+      <Card />
     </div>
   )
 }

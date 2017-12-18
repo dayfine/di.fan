@@ -20,16 +20,9 @@ const Header = ({ classes }) => {
           </ProperButton>
           <ProperButton
             component={Link}
-            to='/projects'
+            to='/about'
           >
-            Projects
-          </ProperButton>
-
-          <ProperButton
-            component={Link}
-            to='/contact'
-          >
-            Contact
+            About
           </ProperButton>
         </div>
         <Typography
@@ -53,10 +46,8 @@ const styles = theme => ({
     boxShadow: 'none'
   },
   flexRow: {
-    minHeight: '48px',
     display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center'
+    justifyContent: 'space-between'
   },
   title: {
     fontFamily: "'Spectral SC', serif",
