@@ -1,0 +1,9 @@
+{
+  "apps": [{
+    "name": "difan.io",
+    "script": "server.js",
+    "env": {
+      "PORT": "3000"
+    }
+  }]
+}
