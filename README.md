@@ -1,2 +1,1 @@
-# di.fan
-Personal Site
+# My personal website!
