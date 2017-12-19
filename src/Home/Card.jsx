@@ -47,11 +47,16 @@ const LinkButton = ({ href, text }) => (
   </Button>
 )
 
-const Overlay = ({ classes, name, repoLink, siteLink }) => (
+const Overlay = ({ classes, name, description, repoLink, siteLink }) => (
   <div className={classes.overlay}>
     <div className={`row around-xs ${classes.flexRow}`}>
       <Typography color='inherit' type='display1' className={classes.title}>
         {name}
+      </Typography>
+    </div>
+    <div className={`row around-xs ${classes.flexRow}`}>
+      <Typography color='inherit' type='subheading'>
+        {description}
       </Typography>
     </div>
     <div className={`row around-xs ${classes.flexRow}`}>
@@ -82,7 +87,7 @@ const styles = {
     width: '100%',
     height: '100%',
     color: '#fff',
-    backgroundColor: 'rgba(72, 72, 72, .7)',
+    backgroundColor: 'rgba(72, 72, 72, .75)',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-around',

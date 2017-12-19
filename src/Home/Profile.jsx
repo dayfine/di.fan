@@ -22,7 +22,7 @@ class Profile extends Component {
 const styles = {
   title: {
     fontFamily: "'Spectral SC', serif",
-    fontSize: '2.25em',
+    fontSize: '4em',
     textDecoration: 'none',
     maxWidth: 500,
     margin: '0 auto',
