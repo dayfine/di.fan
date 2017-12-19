@@ -5,7 +5,6 @@ import Header from './Header'
 import Home from './Home'
 import Landing from './Landing'
 import About from './About'
-import Projects from './Projects'
 
 class App extends Component {
   render () {
