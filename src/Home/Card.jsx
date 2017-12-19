@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+
 import { withStyles } from 'material-ui/styles'
 import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card'
 import Button from 'material-ui/Button'
@@ -9,16 +10,18 @@ class LinkCard extends Component {
     overlay: false
   }
 
-  handleOverlayIn = (evt) => {
+  handleOverlayIn = () => {
     this.setState({ overlay: true })
   }
 
-  handleOverlayOut = (evt) => {
+  handleOverlayOut = () => {
     this.setState({ overlay: false })
   }
 
   render () {
-    const { classes } = this.props
+    const { classes, imgUrl, type, ...rest } = this.props
+    // const {overlay} = this.state
+    const overlay = true
     return (
       <div
         className='col-sm-12 col-md-6 col-lg-4 col-xl-3'
@@ -27,50 +30,48 @@ class LinkCard extends Component {
         <Card className={classes.card}>
           <CardMedia
             className={classes.media}
-            image='//d4n5pyzr6ibrc.cloudfront.net/media/27FB7F0C-9885-42A6-9E0C19C35242B5AC/4785B1C2-8734-405D-96DC23A6A32F256B/thul-90efb785-97af-5e51-94cf-503fc81b6940.jpg'
+            image={imgUrl}
+
             title='wow'
           />
-
-        {this.state.overlay && (
-          <Overlay
-            overlayClass={classes.overlay}
-            name='cat'
-            repoLink='/'
-            siteLink='/'
-          />
-        )}
+          {overlay && (
+            <Overlay classes={classes} {...rest} />
+          )}
         </Card>
       </div>
     )
   }
 }
 
-const Overlay = ({ overlayClass, name, repoLink, siteLink }) => (
-  <div className={overlayClass}>
-    <CardContent>
-      <Typography type='headline' component='h2'>
+const LinkButton = ({ href, text }) => (
+  <Button dense raised color='accent' component='a' href={href} target='_blank'>
+    {text}
+  </Button>
+)
+
+const Overlay = ({ classes, name, repoLink, siteLink }) => (
+  <div className={classes.overlay}>
+    <div className={`row around-xs ${classes.flexRow}`}>
+      <Typography type='headline' component='h2' align='center'>
         {name}
       </Typography>
-    </CardContent>
-    <CardActions>
-      <Button dense color='primary'>
-        Share
-      </Button>
-      <Button dense color='primary'>
-        Learn More
-      </Button>
-    </CardActions>
+    </div>
+    <div className={`row around-xs ${classes.flexRow}`}>
+      <LinkButton href={siteLink} text='Demo Site' />
+      <LinkButton href={repoLink} text='GitHub' />
+    </div>
   </div>
 )
 
 const styles = {
   card: {
     width: '100%',
-    position: 'relative'
+    position: 'relative',
+    paddingBottom: '100%'
   },
   media: {
+    position: 'absolute',
     width: '100%',
-    minHeight: 250,
     height: '100%'
   },
   overlay: {
@@ -79,7 +80,14 @@ const styles = {
     left: 0,
     width: '100%',
     height: '100%',
-    backgroundColor: 'rgba(72, 72, 72, .4)'
+    backgroundColor: 'rgba(222, 222, 222, .3)',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+    alignItems: 'center'
+  },
+  flexRow: {
+    width: '80%',
   }
 }
 

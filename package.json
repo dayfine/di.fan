@@ -28,7 +28,8 @@
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "nodemon server",
     "client": "react-scripts start",
-    "sass": "node-sass -w -r public/stylesheets/scss -o public/stylesheets"
+    "sass": "node-sass -r public/stylesheets/scss -o public/stylesheets",
+    "sass:w": "node-sass -w -r public/stylesheets/scss -o public/stylesheets"
   },
   "devDependencies": {
     "concurrently": "^3.5.1"

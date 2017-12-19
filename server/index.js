@@ -9,26 +9,19 @@ const port = process.env.PORT || 3001
 let indexPath
 
 if (process.env.NODE_ENV !== 'production') {
-  // require('../secrets')
+  app.use('/assets', express.static(path.join(__dirname, '../public/assets')))
   indexPath = path.join(__dirname, '..', 'public', 'index.html')
 } else {
   app.use(express.static(path.join(__dirname, '..', 'build')))
+  app.use('/assets', express.static(path.join(__dirname, '../build/assets')))
   indexPath = path.join(__dirname, '..', 'build', 'index.html')
 }
-
-// app.get('*.js', function (req, res, next) {
-//   req.url = req.url + '.gz'
-//   res.set('Content-Encoding', 'gzip')
-//   next()
-// })
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(morgan('dev'))
 app.use(cors())
-app.use('/dist', express.static(path.join(__dirname, '../dist')))
 app.use('/public', express.static(path.join(__dirname, '../public')))
-app.use('/links', express.static(path.join(__dirname, '../links')))
 
 app.use('/api', require('./api'))
 

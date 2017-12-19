@@ -21,6 +21,17 @@ $gutter: 16px;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+
+  &.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+
+    & > [class^="col-"],
+    & > [class*=" col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
 }
 
 .center {

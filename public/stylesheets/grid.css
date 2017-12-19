@@ -15,6 +15,13 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start; }
+  .row.no-gutters {
+    margin-right: 0;
+    margin-left: 0; }
+    .row.no-gutters > [class^="col-"],
+    .row.no-gutters > [class*=" col-"] {
+      padding-right: 0;
+      padding-left: 0; }
 
 .center {
   float: none;
@@ -29,6 +36,9 @@
 
 .between-xs {
   justify-content: space-between; }
+
+.around-xs {
+  justify-content: space-around; }
 
 .start-xs {
   justify-content: flex-start; }
