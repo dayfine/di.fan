@@ -14,7 +14,7 @@ const Icon = ({ href, site, iconClass }) => (
 
 const Header = ({ classes }) => {
   return (
-    <AppBar className={classes.root}>
+    <AppBar className={classes.root} position='static'>
       <Toolbar className={classes.flexRow}>
         <div className={classes.flexRow}>
           <ProperButton

@@ -20,8 +20,8 @@ class LinkCard extends Component {
 
   render () {
     const { classes, imgUrl, type, ...rest } = this.props
-    // const {overlay} = this.state
-    const overlay = true
+    const { overlay } = this.state
+
     return (
       <div
         className='col-sm-12 col-md-6 col-lg-4 col-xl-3'
@@ -31,8 +31,6 @@ class LinkCard extends Component {
           <CardMedia
             className={classes.media}
             image={imgUrl}
-
-            title='wow'
           />
           {overlay && (
             <Overlay classes={classes} {...rest} />
@@ -52,7 +50,7 @@ const LinkButton = ({ href, text }) => (
 const Overlay = ({ classes, name, repoLink, siteLink }) => (
   <div className={classes.overlay}>
     <div className={`row around-xs ${classes.flexRow}`}>
-      <Typography type='headline' component='h2' align='center'>
+      <Typography color='inherit' type='display1' className={classes.title}>
         {name}
       </Typography>
     </div>
@@ -72,7 +70,10 @@ const styles = {
   media: {
     position: 'absolute',
     width: '100%',
-    height: '100%'
+    height: '100%',
+    backgroundColor: '#000',
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat'
   },
   overlay: {
     position: 'absolute',
@@ -80,11 +81,16 @@ const styles = {
     left: 0,
     width: '100%',
     height: '100%',
-    backgroundColor: 'rgba(222, 222, 222, .3)',
+    color: '#fff',
+    backgroundColor: 'rgba(72, 72, 72, .7)',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-around',
     alignItems: 'center'
+  },
+  title: {
+    fontFamily: "'Spectral SC', serif",
+    textAlign: 'center'
   },
   flexRow: {
     width: '80%',
