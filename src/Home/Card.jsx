@@ -4,17 +4,6 @@ import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card'
 import Button from 'material-ui/Button'
 import Typography from 'material-ui/Typography'
 
-const styles = {
-  card: {
-    width: '100%'
-  },
-  media: {
-    width: '100%',
-    minHeight: 250,
-    height: '100%'
-  }
-}
-
 class LinkCard extends Component {
   render () {
     const { classes } = this.props
@@ -29,7 +18,7 @@ class LinkCard extends Component {
           <div className={classes.overlay}>
             <CardContent>
               <Typography type='headline' component='h2'>
-                Lizard
+                Cat
               </Typography>
             </CardContent>
             <CardActions>
@@ -44,6 +33,17 @@ class LinkCard extends Component {
         </Card>
       </div>
     )
+  }
+}
+
+const styles = {
+  card: {
+    width: '100%'
+  },
+  media: {
+    width: '100%',
+    minHeight: 250,
+    height: '100%'
   }
 }
 

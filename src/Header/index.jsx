@@ -2,10 +2,15 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import { withStyles } from 'material-ui/styles'
-import ProperButton from './ProperButton'
+import ProperButton from '../common/ProperButton'
 import AppBar from 'material-ui/AppBar'
 import Toolbar from 'material-ui/Toolbar'
-import Typography from 'material-ui/Typography'
+
+const Icon = ({ href, site, iconClass }) => (
+  <a href={href} target='_blank'>
+    <i className={`fa fa-${site} ${iconClass}`} aria-hidden='true' />
+  </a>
+)
 
 const Header = ({ classes }) => {
   return (
@@ -25,14 +30,11 @@ const Header = ({ classes }) => {
             About
           </ProperButton>
         </div>
-        <Typography
-          type='headline'
-          className={classes.title}
-          component={Link}
-          to='/'
-        >
-          Di Fan
-        </Typography>
+        <div className={classes.flexRow}>
+          <Icon href='//github.com/dayfine' site='github' iconClass={classes.icon} />
+          <Icon href='//linkedin.com/in/daveyfan' site='linkedin' iconClass={classes.icon} />
+          <Icon href='//instagram.com/dayfine/' site='instagram' iconClass={classes.icon} />
+        </div>
       </Toolbar>
     </AppBar>
   )
@@ -47,19 +49,14 @@ const styles = theme => ({
   },
   flexRow: {
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    minHeight: 48
   },
-  title: {
-    fontFamily: "'Spectral SC', serif",
-    fontSize: '2.25em',
-    textDecoration: 'none',
-    marginRight: '16px',
-    flex: '5 0 25%',
-    color: '#fff',
-    textAlign: 'right',
-    '&:hover': {
-      color: '#eee'
-    }
+  icon: {
+    fontSize: '1.25em',
+    marginRight: 20,
+    color: '#fff'
   }
 })
 

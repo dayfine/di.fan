@@ -2,6 +2,15 @@ import React from 'react'
 import Button from 'material-ui/Button'
 import { withStyles } from 'material-ui/styles'
 
+const ProperButton = props => {
+  const {classes, ...rest} = props
+  return (
+    <Button color='contrast' className={classes.proper} {...rest}>
+      {props.children}
+    </Button>
+  )
+}
+
 const styles = {
   proper: {
     flex: '0 0 auto',
@@ -12,15 +21,6 @@ const styles = {
       color: '#ccc'
     }
   }
-}
-
-const ProperButton = props => {
-  const {classes, ...rest} = props
-  return (
-    <Button color='contrast' className={classes.proper} {...rest}>
-      {props.children}
-    </Button>
-  )
 }
 
 export default withStyles(styles)(ProperButton)
