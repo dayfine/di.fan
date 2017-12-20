@@ -87,7 +87,7 @@ const styles = {
     width: '100%',
     height: '100%',
     color: '#fff',
-    backgroundColor: 'rgba(72, 72, 72, .75)',
+    backgroundColor: 'rgba(72, 72, 72, .8)',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-around',

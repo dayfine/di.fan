@@ -77,7 +77,7 @@ const styles = {
     position: 'absolute',
     width: '100%',
     height: '100%',
-    zIndex: 111,
+    zIndex: 11,
     background: '#eee'
   },
   ripple: {

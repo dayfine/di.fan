@@ -1,5 +1,5 @@
 import React from 'react'
-import { withRouter, Link } from 'react-router-dom'
+import { withRouter, NavLink } from 'react-router-dom'
 
 import { withStyles } from 'material-ui/styles'
 import ProperButton from '../common/ProperButton'
@@ -24,13 +24,15 @@ const Header = ({ classes, location }) => {
       <Toolbar className={classes.flexRow}>
         <div className={classes.flexRow}>
           <ProperButton
-            component={Link}
+            component={NavLink}
+            activeClassName={classes.active}
             to='/home'
           >
             Home
           </ProperButton>
           <ProperButton
-            component={Link}
+            component={NavLink}
+            activeClassName={classes.active}
             to='/about'
           >
             About
@@ -40,6 +42,7 @@ const Header = ({ classes, location }) => {
           <Icon href='//github.com/dayfine' site='github' iconClass={classes.icon} />
           <Icon href='//linkedin.com/in/daveyfan' site='linkedin' iconClass={classes.icon} />
           <Icon href='//instagram.com/dayfine/' site='instagram' iconClass={classes.icon} />
+          <Icon href='mailto:difancpa@gmail.com' site='envelope' iconClass={classes.icon} />
         </div>
       </Toolbar>
     </AppBar>
@@ -56,6 +59,10 @@ const styles = theme => ({
     border: '1px solid rgba(222, 222, 222, 0)',
     boxShadow: 'none',
     color: '#fff'
+  },
+  active: {
+    background: '#333',
+    color: '#ccc'
   },
   flexRow: {
     display: 'flex',
