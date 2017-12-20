@@ -2,7 +2,7 @@ import React from 'react'
 import { TransitionMotion, spring } from 'react-motion'
 import { withStyles } from 'material-ui/styles'
 
-const leavingSpringConfig = {stiffness: 100, damping: 35};
+const leavingSpringConfig = {stiffness: 100, damping: 35}
 
 class Background extends React.Component {
   state = {
