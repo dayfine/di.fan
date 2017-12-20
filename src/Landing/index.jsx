@@ -1,11 +1,11 @@
 import React from 'react'
 
+import Background from './Background'
+
 function Landing (props) {
   return (
     <div className='row'>
-      <div className='col-sm-6'>
-        Hello Landing!
-      </div>
+      <Background />
     </div>
   )
 }

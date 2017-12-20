@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 
 import { withStyles } from 'material-ui/styles'
 import ProperButton from '../common/ProperButton'
@@ -12,9 +12,15 @@ const Icon = ({ href, site, iconClass }) => (
   </a>
 )
 
-const Header = ({ classes }) => {
+const Header = ({ classes, location }) => {
+  const { pathname } = location
+  const landing = location.pathname === '/'
+
   return (
-    <AppBar className={classes.root} position='static'>
+    <AppBar
+      className={landing ? classes.landing : classes.root}
+      position='static'
+    >
       <Toolbar className={classes.flexRow}>
         <div className={classes.flexRow}>
           <ProperButton
@@ -41,11 +47,15 @@ const Header = ({ classes }) => {
 }
 
 const styles = theme => ({
+  landing: {
+    background: '#eee',
+    color: '#111'
+  },
   root: {
-    width: '100%',
     background: 'rgba(222, 222, 222, 0)',
     border: '1px solid rgba(222, 222, 222, 0)',
-    boxShadow: 'none'
+    boxShadow: 'none',
+    color: '#fff'
   },
   flexRow: {
     display: 'flex',
@@ -56,8 +66,8 @@ const styles = theme => ({
   icon: {
     fontSize: '1.25em',
     marginRight: 20,
-    color: '#fff'
+    textDecoration: 'none'
   }
 })
 
-export default withStyles(styles)(Header)
+export default withRouter(withStyles(styles)(Header))

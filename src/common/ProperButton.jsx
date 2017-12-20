@@ -5,7 +5,7 @@ import { withStyles } from 'material-ui/styles'
 const ProperButton = props => {
   const {classes, ...rest} = props
   return (
-    <Button color='contrast' className={classes.proper} {...rest}>
+    <Button color='inherit' className={classes.proper} {...rest}>
       {props.children}
     </Button>
   )
