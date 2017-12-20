@@ -22,6 +22,10 @@ $gutter: 16px;
   justify-content: space-between;
   align-items: flex-start;
 
+  &.full {
+    width: 100%;
+  }
+
   &.no-gutters {
     margin-right: 0;
     margin-left: 0;

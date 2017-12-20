@@ -28,11 +28,17 @@ const styles = {
     }
   },
   name: {
-    fontSize: '7.5em'
+    fontSize: '7.5em',
+    '@media (max-width: 768px)': {
+      fontSize: '4em'
+    }
   },
   tagline: {
     marginTop: 12,
-    fontSize: '2.75em'
+    fontSize: '2.75em',
+    '@media (max-width: 768px)': {
+      fontSize: '1.5em'
+    }
   }
 }
 

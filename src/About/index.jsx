@@ -13,10 +13,10 @@ function About ({ classes }) {
           Dreamer
         </Typography>
         <Typography type='body1' color='inherit'>
-          CPA turned progmmer, Di wrote his first computer program in 2017 to automate half of his accounting work. Intrigued, Di went on to explore more about programming by attending <a href='//www.fullstackacademy.com' target='_blank'>Fullstack Academy of Code in New York City</a>, where he deep-dived into Web Development with React and Node.js.
+          CPA turned progmmer, I wrote my first computer program in 2017 to automate half of my accounting work. Intrigued, I went on exploring programming by attending <a href='//www.fullstackacademy.com' target='_blank'>Fullstack Academy of Code in New York City</a>, where I deep-dived into Web Development with React and Node.js.
           <br />
           <br />
-          In between coding, Di loves spending time with friends, reading about all sorts of topics, learning human and programming languages, watching manga or Netflix series, or even traveling to the other side of the planet.
+          In between coding, I love spending time with friends, reading about all sorts of topics, learning human and programming languages, watching manga or Netflix series, or even traveling to the other side of the planet.
         </Typography>
       </div>
     </div>

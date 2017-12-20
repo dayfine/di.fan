@@ -48,10 +48,10 @@ const Header = ({ classes, location }) => {
           </ProperButton>
         </div>
         <div className={classes.flexRow}>
+          <Icon href='mailto:difancpa@gmail.com' site='envelope' iconClass={classes.icon} />
           <Icon href='//github.com/dayfine' site='github' iconClass={classes.icon} />
           <Icon href='//linkedin.com/in/daveyfan' site='linkedin' iconClass={classes.icon} />
           <Icon href='//instagram.com/dayfine/' site='instagram' iconClass={classes.icon} />
-          <Icon href='mailto:difancpa@gmail.com' site='envelope' iconClass={classes.icon} />
         </div>
       </Toolbar>
     </AppBar>

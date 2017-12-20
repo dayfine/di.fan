@@ -8,13 +8,15 @@ class Profile extends Component {
   render () {
     const { classes } = this.props
     return (
-      <div className='col-sm-12'>
-        <CenterPaper>
-          <Typography type='headline' className={classes.title}>
-            Di Fan
-          </Typography>
-        </CenterPaper>
-      </div>
+      <CenterPaper>
+        <Typography type='headline' className={classes.title}>
+          Di Fan
+        </Typography>
+        <Typography type='body1'>
+          Web Developer in New York City
+        </Typography>
+      </CenterPaper>
+
     )
   }
 }

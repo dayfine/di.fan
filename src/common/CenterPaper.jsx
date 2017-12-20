@@ -15,6 +15,7 @@ const styles = {
   center: {
     flex: '1 0 auto',
     textTransform: 'none',
+    width: '100%',
     padding: '36px 24px',
     margin: '0 auto',
     fontSize: '1em',
