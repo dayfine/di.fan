@@ -3,6 +3,7 @@ import { withRouter, NavLink } from 'react-router-dom'
 
 import { withStyles } from 'material-ui/styles'
 import ProperButton from '../common/ProperButton'
+import Avatar from 'material-ui/Avatar'
 import AppBar from 'material-ui/AppBar'
 import Toolbar from 'material-ui/Toolbar'
 
@@ -13,7 +14,6 @@ const Icon = ({ href, site, iconClass }) => (
 )
 
 const Header = ({ classes, location }) => {
-  const { pathname } = location
   const landing = location.pathname === '/'
 
   return (
@@ -23,6 +23,15 @@ const Header = ({ classes, location }) => {
     >
       <Toolbar className={classes.flexRow}>
         <div className={classes.flexRow}>
+          {!landing &&
+            <Avatar
+              component={NavLink}
+              to='/'
+              className={classes.avatar}
+            >
+              DF
+            </Avatar>
+          }
           <ProperButton
             component={NavLink}
             activeClassName={classes.active}
@@ -59,6 +68,11 @@ const styles = theme => ({
     border: '1px solid rgba(222, 222, 222, 0)',
     boxShadow: 'none',
     color: '#fff'
+  },
+  avatar: {
+    textDecoration: 'none',
+    marginRight: 15,
+    background: 'rgba(222, 222, 222, 0.25)'
   },
   active: {
     background: '#333',
