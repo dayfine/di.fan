@@ -19,7 +19,8 @@ const styles = {
     padding: '36px 24px',
     margin: '0 auto',
     fontSize: '1em',
-    backgroundColor: '#222'
+    backgroundColor: '#222',
+    color: '#eee'
   }
 }
 

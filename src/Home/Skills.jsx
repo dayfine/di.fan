@@ -2,7 +2,6 @@ import React from 'react'
 import { withStyles } from 'material-ui/styles'
 import CenterPaper from '../common/CenterPaper'
 import Chip from 'material-ui/Chip'
-import Typography from 'material-ui/Typography'
 
 const skills = [
   'React', 'JavaScript', 'ES6/Babel', 'Redux',
@@ -17,14 +16,17 @@ function Skills ({ classes }) {
     <CenterPaper>
       <div className='row start-xs'>
         {skills.map(skill => (
-          <Chip
-            label={skill}
+          <div
             key={skill}
             className='col-xs-4 col-sm-3 col-md-2 col-xl-1'
-            classes={{
-              root: classes.chip
-            }}
-          />
+          >
+            <Chip
+              label={skill}
+              classes={{
+                root: classes.chip
+              }}
+            />
+          </div>
         ))}
       </div>
     </CenterPaper>
@@ -33,16 +35,41 @@ function Skills ({ classes }) {
 
 const styles = {
   chip: {
+    flex: '1 0 100%',
+    width: '90%',
     margin: '8px 12px',
-    // background: '#e9e9e9',
+    fontWeight: 750,
+    color: '#484848',
     borderRadius: '8px',
-    backgroundImage: `-webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 6%, hsla(0,0%,100%, .1) 7.5%),
-    -webkit-repeating-linear-gradient(left, hsla(0,0%, 0%,0) 0%, hsla(0,0%,  0%,0) 4%, hsla(0,0%,  0%,.03) 4.5%),
-    -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
-    linear-gradient(180deg, hsl(0,0%,78%)  0%,
-    hsl(0,0%,90%) 47%,
-    hsl(0,0%,78%) 53%,
-    hsl(0,0%,70%)100%)`
+    backgroundImage: `
+      -webkit-repeating-linear-gradient(
+        left,
+        hsla(0,0%,100%,0) 0%,
+        hsla(0,0%,100%,0) 6%,
+        hsla(0,0%,100%,.1) 7.5%
+      ),
+
+      -webkit-repeating-linear-gradient(
+        left,
+        hsla(0,0%,0%,0) 0%,
+        hsla(0,0%,0%,.0) 4%,
+        hsla(0,0%,0%,.03) 5%
+      ),
+
+      -webkit-repeating-linear-gradient(
+        left,
+        hsla(0,0%,100%,0) 0%,
+        hsla(0,0%,100%,0) 1.2%,
+        hsla(0,0%,100%,.15) 2.2%
+      ),
+
+      linear-gradient(
+        180deg, hsl(0,0%,85%) 0%,
+        hsl(0,0%,95%) 47%,
+        hsl(0,0%,80%) 53%,
+        hsl(0,0%,65%)100%
+      )
+    `
   }
 }
 

@@ -64,7 +64,7 @@ const styles = theme => ({
     color: '#111'
   },
   root: {
-    background: 'rgba(222, 222, 222, 0)',
+    background: 'rgba(222, 222, 222, 0.1)',
     border: '1px solid rgba(222, 222, 222, 0)',
     boxShadow: 'none',
     color: '#fff'
