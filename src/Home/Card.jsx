@@ -42,7 +42,11 @@ class LinkCard extends Component {
 }
 
 const LinkButton = ({ href, text }) => (
-  <Button dense raised color='accent' component='a' href={href} target='_blank'>
+  <Button
+    dense raised color='accent' component='a'
+    href={href} target='_blank'
+    disabled={href===''}
+  >
     {text}
   </Button>
 )

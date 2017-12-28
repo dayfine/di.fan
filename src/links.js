@@ -21,7 +21,7 @@ export default [
     imgUrl: '/assets/woflow.png',
     description: 'The to-do list to end all to-do lists',
     repoLink: '//github.com/dayfine/woflow',
-    siteLink: '//woflow.difan.io/'
+    siteLink: ''
   },
   {
     name: 'Graceshopper',

@@ -12,6 +12,9 @@ function Profile ({ classes }) {
             type='headline'
             className={classes.title}
             color='inherit'
+            component='a'
+            href='/assets/resume.pdf'
+            target='_blank'
           >
             Di Fan
           </Typography>
@@ -29,7 +32,7 @@ function Profile ({ classes }) {
             align='justify'
           >
             <br />
-            I mainly use React/Redux, Node.js, and CSS-in-JS solutoins, but am open to other stacks. I am learning new languages/technologies to be able to solve even more impactful problems. I really look forward the opportunities to work with smart people on irreplaceable products!
+            I mainly use React/Redux, Node.js, and CSS-in-JS solutoins, but am open to other stacks. I am learning new languages/technologies to be able to solve even more impactful problems. I really look forward to the opportunities to work with smart people on irreplaceable products!
           </Typography>
         </div>
       </Paper>

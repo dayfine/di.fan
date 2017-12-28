@@ -1,6 +1,7 @@
 import React from 'react'
 import { withStyles } from 'material-ui/styles'
 import Typography from 'material-ui/Typography'
+import Button from 'material-ui/Button'
 
 function About ({ classes }) {
   return (
@@ -17,7 +18,15 @@ function About ({ classes }) {
           <br />
           <br />
           In between coding, I love spending time with friends, reading about all sorts of topics, learning human and programming languages, watching manga or Netflix series, or even traveling to the other side of the planet.
+          <br />
+          <br />
         </Typography>
+        <Button
+          dense raised color='white'
+          component='a' href='/assets/resume.pdf' target='_blank'
+        >
+          Résumé
+        </Button>
       </div>
     </div>
   )
