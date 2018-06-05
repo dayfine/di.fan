@@ -3,6 +3,8 @@ import { withStyles } from 'material-ui/styles'
 import Paper from 'material-ui/Paper'
 import Typography from 'material-ui/Typography'
 
+import { resumeVer } from '../constant'
+
 function Profile ({ classes }) {
   return (
     <div className={classes.wrapper}>
@@ -13,8 +15,9 @@ function Profile ({ classes }) {
             className={classes.title}
             color='inherit'
             component='a'
-            href='/assets/resume.pdf'
+            href={`assets/di_fan_resume_${resumeVer}.pdf`}
             target='_blank'
+            rel='noopener noreferrer'
           >
             Di Fan
           </Typography>

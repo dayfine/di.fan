@@ -3,6 +3,8 @@ import { withStyles } from 'material-ui/styles'
 import Typography from 'material-ui/Typography'
 import Button from 'material-ui/Button'
 
+import { resumeVer } from '../constant'
+
 function About ({ classes }) {
   return (
     <div className={`row ${classes.wrapper}`}>
@@ -22,8 +24,13 @@ function About ({ classes }) {
           <br />
         </Typography>
         <Button
-          dense raised color='white'
-          component='a' href='/assets/resume.pdf' target='_blank'
+          dense
+          raised
+          color='white'
+          component='a'
+          href={`assets/di_fan_resume_${resumeVer}.pdf`}
+          target='_blank'
+          rel='noopener noreferrer'
         >
           Résumé
         </Button>

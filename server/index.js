@@ -4,7 +4,6 @@ const bodyParser = require('body-parser')
 const morgan = require('morgan')
 const cors = require('cors')
 const path = require('path')
-// const db = require('./db')
 const port = process.env.PORT || 3001
 let indexPath
 
@@ -43,10 +42,3 @@ app.use((err, req, res, next) => {
 })
 
 app.listen(port, () => console.log(`listening on port ${port}`))
-
-// db.sync()
-//   .then(() => db.seed())
-//   .then(() => {
-//     console.log('db synced')
-// app.listen(port, () => console.log(`listening on port ${port}`))
-//   })
