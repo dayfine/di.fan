@@ -4,11 +4,10 @@ import CenterPaper from '../common/CenterPaper'
 import Chip from 'material-ui/Chip'
 
 const skills = [
-  'React', 'JavaScript', 'ES6/Babel', 'Redux',
-  'Node.js', 'Express', 'SQL', 'PostgreSQL',
-  'HTML5/CSS3', 'Sass', 'Material Design', 'Bootstrap',
-  'Git/GitHub', 'TDD', 'Heroku', 'AWS',
-  'Python', 'PHP'
+  'React', 'JavaScript', 'ES6/Babel', 'Redux', 'Python', 'Django',
+  'Node.js', 'Express', 'SQL', 'PostgreSQL', 'Ansible', 'AWS',
+  'Webpack', 'Angular', 'HTML5/CSS3', 'Sass', 'Material Design',
+  'Bootstrap', 'UNIX', 'Git/GitHub', 'TDD', 'Heroku', 'PHP', 'C'
 ]
 
 function Skills ({ classes }) {

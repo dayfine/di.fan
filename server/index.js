@@ -22,8 +22,6 @@ app.use(morgan('dev'))
 app.use(cors())
 app.use('/public', express.static(path.join(__dirname, '../public')))
 
-app.use('/api', require('./api'))
-
 app.get('*', (req, res, next) => res.sendFile(indexPath))
 
 app.use((req, res, next) => {

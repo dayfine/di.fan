@@ -35,7 +35,7 @@ function Profile ({ classes }) {
             align='justify'
           >
             <br />
-            I mainly use React/Redux, Node.js, and CSS-in-JS solutoins, but am open to other stacks. I am learning new languages/technologies to be able to solve even more impactful problems. I really look forward to the opportunities to work with smart people on irreplaceable products!
+            I am fullstack software engineer experienced in React / Redux, Python / Django, and Node.js. I am also in the process of learning C/C++, and learning new languages/tech stacks to be able to solve even more impactful problems. I really look forward to the opportunities to work with smart people on irreplaceable products!
           </Typography>
         </div>
       </Paper>
